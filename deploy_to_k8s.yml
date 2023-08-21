@@ -1,0 +1,17 @@
+---
+- name: deploy app in new namespace
+  hosts: localhost
+  tasks: 
+   - name: create a k8s namespace
+     k8s: 
+      name: my-app
+      api_version: v1 
+      kind: Namespace
+      state: present
+      kubeconfig: /mnt/c/Users/Tomiwa/.kube/config
+   - name: deploy nginx app
+     k8s: 
+      src: /mnt/c/Users/Tomiwa/Documents/cloud_engineering_roadmap/ansible_kubernetes/nginx-config.yml
+      state: present
+      kubeconfig: /mnt/c/Users/Tomiwa/.kube/config
+      namespace: my-app
