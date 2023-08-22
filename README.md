@@ -1,11 +1,22 @@
-## Ansible and Minikube configuration for provisioning a Minikube cluster, and starting an nginx image in the Cluster.
+## Ansible and Minikube configuration for provisioning a Minikube cluster, and starting an Nginx image in the Cluster.
 
 # Ansible Documentation
 - [Ansible Kubernetes documentation](https://docs.ansible.com/ansible/latest/collections/kubernetes/core/k8s_module.html#ansible-collections-kubernetes-core-k8s-module)
 - Install kubectl locally
 - Install python locally
+
 - Install pyYAML locally
+```
+python -m pip install yaml --user
+```
 - Install jsonpatch locally
+```
+python -m pip install jsonpatch --user
+```
+- Install openshift locally
+```
+python -m pip install openshift --user
+```
 
 ## Prerequisites
 
